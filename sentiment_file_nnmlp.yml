@@ -1,0 +1,21 @@
+tags:
+  - name: Sentiment Upload File for Neural Network (MLP Classifier)
+get:
+  description: Predict sentiment input by file csv. Format for csv input refer to sample_input.csv in the project.
+consumes:
+  - multipart/form-data
+parameters:
+  - name: file
+    in: formData
+    description: File to upload
+    required: true
+    type: file
+responses:
+    '200':
+      description: Successful response
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error
+
+      
